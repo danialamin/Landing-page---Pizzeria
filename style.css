@@ -40,11 +40,12 @@ header h1 {
 header div:nth-child(2) {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  min-width: 300px;
   margin-bottom: 1em;
 }
 
 header div:nth-child(2) a {
+  position: relative;
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
@@ -58,7 +59,6 @@ header div:nth-child(2) a {
   text-align: center;
   font-size: 1.3rem;
   border: 1px solid grey;
-  display: none;
 }
 
 .homeMain p {
@@ -75,9 +75,13 @@ header div:nth-child(2) a {
 }
 
 .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  font-size: 1.1rem;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  text-align: center;
 }
 
 .copyright p img:nth-child(1) {
@@ -89,7 +93,7 @@ header div:nth-child(2) a {
 }
 
 .allcontainer .bg .copyright p a img {
-  width: 1rem;
+  max-width: 1rem;
   height: 1rem;
 }
 
@@ -105,7 +109,6 @@ header div:nth-child(2) a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 40px;
-  /* grid-column-gap: 40px; */
   padding: 40px 30px 40px 40px;
   grid-auto-rows: 300px;
 
@@ -114,12 +117,12 @@ header div:nth-child(2) a {
 
 .menuMain div {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 300px;
+  max-width: 300px;
   padding: 0.5em;
 }
 
 .menuMain img {
-  width: 130px;
+  max-width: 130px;
   height: 85px;
 }
 
@@ -131,13 +134,14 @@ header div:nth-child(2) a {
 .contactMain {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 4em auto;
-  width: 700px;
+  max-width: 700px;
   color: white;
   text-align: center;
   font-size: 1.3rem;
   border: 0.05px solid grey;
 
   padding: 50px 25px 50px 25px;
+  display: none;
 }
 
 .contactMain p {
@@ -147,7 +151,7 @@ header div:nth-child(2) a {
 
 .contactMain p img {
   height: 22px;
-  width: 22px;
+  max-width: 22px;
   margin-right: 10px;
 }
 
@@ -156,4 +160,24 @@ header div:nth-child(2) a {
   margin-top: 25px;
   width: 92%;
   height: 400px;
+}
+
+.menuMain div:hover {
+  background-color: rgba(99, 99, 99, 0.4);
+}
+
+header div:nth-child(2) a:hover {
+  transform: translateY(-10%);
+}
+
+header div:nth-child(2) .active::after {
+  content: "";
+  left: 0;
+  top: 41px;
+  background-color: white;
+  height: 3px;
+  width: 102%;
+  position: absolute;
+
+  transition: 0.7s ease;
 }
