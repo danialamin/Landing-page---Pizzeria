@@ -181,3 +181,26 @@ header div:nth-child(2) .active::after {
 
   transition: 0.7s ease;
 }
+
+@media (max-width: 700px) {
+  .homeMain {
+    width: 100%;
+  }
+  .menuMain {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .menuMain div {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .contactMain p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  header h1 {
+    font-size: 5rem;
+  }
+}
