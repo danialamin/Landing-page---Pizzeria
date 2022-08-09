@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -106,6 +108,8 @@ header div:nth-child(2) a {
   /* grid-column-gap: 40px; */
   padding: 40px 30px 40px 40px;
   grid-auto-rows: 300px;
+
+  display: none;
 }
 
 .menuMain div {
@@ -122,4 +126,34 @@ header div:nth-child(2) a {
 .menuMain div h2 {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
+}
+
+.contactMain {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 4em auto;
+  width: 700px;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  border: 0.05px solid grey;
+
+  padding: 50px 25px 50px 25px;
+}
+
+.contactMain p {
+  text-align: left;
+  line-height: 2.5em;
+}
+
+.contactMain p img {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.contactMain .map {
+  padding: 0 auto;
+  margin-top: 25px;
+  width: 92%;
+  height: 400px;
 }
