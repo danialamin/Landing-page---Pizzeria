@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", cursive;
+  font-family: sans-serif;
 }
 
 .bg {
@@ -159,7 +159,7 @@ header div:nth-child(2) a {
   padding: 0 auto;
   margin-top: 25px;
   width: 92%;
-  height: 400px;
+  height: 45%;
 }
 
 .menuMain div:hover {
@@ -197,10 +197,19 @@ header div:nth-child(2) .active::after {
   .contactMain p {
     text-align: center;
   }
+  .contactMain {
+    width: 100%;
+  }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   header h1 {
     font-size: 5rem;
+  }
+  .contactMain {
+    padding: 50px 0;
+  }
+  .allcontainer .bg .contactMain .map {
+    width: 100%;
   }
 }
